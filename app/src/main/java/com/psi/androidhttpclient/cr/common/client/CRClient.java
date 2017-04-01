@@ -2,6 +2,14 @@ package com.psi.androidhttpclient.cr.common.client;
 
 import com.google.gson.Gson;
 import com.psi.androidhttpclient.client.BaseHttpClient;
+import com.psi.androidhttpclient.client.network.GsonConverterFactory;
+import com.psi.androidhttpclient.client.network.Method;
+import com.psi.androidhttpclient.client.network.RequestInfo;
+import com.psi.androidhttpclient.common.CRGlobalConst;
+import com.psi.androidhttpclient.cr.common.model.CRRequest;
+import com.psi.androidhttpclient.cr.common.model.CRResponse;
+import com.psi.androidhttpclient.cr.common.response.CRBeanParser;
+import com.psi.androidhttpclient.util1.LoggerUtils;
 import com.psi.androidhttpclient.util1.gson.GsonUtils;
 import java.util.HashMap;
 import okhttp3.Response;

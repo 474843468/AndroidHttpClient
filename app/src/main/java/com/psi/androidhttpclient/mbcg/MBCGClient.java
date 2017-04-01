@@ -1,14 +1,14 @@
 package com.psi.androidhttpclient.mbcg;
 
-import com.boc.bocsoft.mobile.bocyun.common.global.YunGlobalConst;
-import com.boc.bocsoft.mobile.common.client.BaseHttpClient;
-import com.boc.bocsoft.mobile.common.client.CookieStore;
-import com.boc.bocsoft.mobile.common.client.network.GsonConverterFactory;
-import com.boc.bocsoft.mobile.common.client.network.Method;
-import com.boc.bocsoft.mobile.common.client.network.RequestInfo;
-import com.boc.bocsoft.mobile.common.utils.LoggerUtils;
-import com.boc.bocsoft.mobile.common.utils.gson.GsonUtils;
 import com.google.gson.Gson;
+import com.psi.androidhttpclient.bocyun.common.global.YunGlobalConst;
+import com.psi.androidhttpclient.client.BaseHttpClient;
+import com.psi.androidhttpclient.client.CookieStore;
+import com.psi.androidhttpclient.client.network.GsonConverterFactory;
+import com.psi.androidhttpclient.client.network.Method;
+import com.psi.androidhttpclient.client.network.RequestInfo;
+import com.psi.androidhttpclient.util1.LoggerUtils;
+import com.psi.androidhttpclient.util1.gson.GsonUtils;
 import java.util.HashMap;
 import okhttp3.MediaType;
 import rx.Observable;

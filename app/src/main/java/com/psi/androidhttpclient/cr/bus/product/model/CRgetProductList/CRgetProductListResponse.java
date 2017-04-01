@@ -1,6 +1,6 @@
 package com.psi.androidhttpclient.cr.bus.product.model.CRgetProductList;
 
-import com.boc.bocsoft.mobile.cr.common.model.CRResponse;
+import com.psi.androidhttpclient.cr.common.model.CRResponse;
 
 /**
  *

@@ -14,7 +14,7 @@ public class ModuleFactoryImpl implements ModuleFactory {
   static {
 
     // 账户管理
-    moduleMap.put(ModuleCode.MODULE_ACCOUNT_0000, OverviewFragment.class);
+  //  moduleMap.put(ModuleCode.MODULE_ACCOUNT_0000, OverviewFragment.class);
   }
 
 

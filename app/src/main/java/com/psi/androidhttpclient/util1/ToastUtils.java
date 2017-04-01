@@ -1,7 +1,7 @@
 package com.psi.androidhttpclient.util1;
 
 import android.widget.Toast;
-import com.psi.androidhttpclient.common.App;
+import com.psi.androidhttpclient.common.ApplicationContext;
 
 /**
  * Created by dingeryue on 2016年08月20.
@@ -21,7 +21,7 @@ public class ToastUtils {
     if(toast != null){
       toast.cancel();
     }
-    toast =  Toast.makeText(App.getInstance(),msg,time);
+    toast =  Toast.makeText(ApplicationContext.getInstance(),msg,time);
     toast.show();
 
   }

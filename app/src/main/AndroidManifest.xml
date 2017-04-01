@@ -56,8 +56,8 @@
         android:name=".ui.SelectedTableModifyBillActivity"
         android:theme="@style/AppTheme1" />
     <activity android:name=".ui.Main6Activity" />
-    <activity android:name=".ui.MainActivity" />
     <activity android:name=".ui.Main4Activity"/>
+    <activity android:name="com.psi.androidhttpclient.ui.MainActivity"/>
   </application>
 
 </manifest>

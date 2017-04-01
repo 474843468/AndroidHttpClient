@@ -1,6 +1,6 @@
 package com.psi.androidhttpclient.mbcg;
 
-import com.boc.bocsoft.mobile.common.client.exception.HttpException;
+import com.psi.androidhttpclient.client.exception.HttpException;
 import rx.Observable;
 import rx.functions.Func1;
 

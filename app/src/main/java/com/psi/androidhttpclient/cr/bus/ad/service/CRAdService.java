@@ -1,9 +1,9 @@
 package com.psi.androidhttpclient.cr.bus.ad.service;
 
-import com.boc.bocsoft.mobile.cr.bus.ad.model.CRgetPosterList.CRgetPosterListParams;
-import com.boc.bocsoft.mobile.cr.bus.ad.model.CRgetPosterList.CRgetPosterListResponse;
-import com.boc.bocsoft.mobile.cr.bus.ad.model.CRgetPosterList.CRgetPosterListResult;
-import com.boc.bocsoft.mobile.cr.common.client.CRClient;
+import com.psi.androidhttpclient.cr.bus.ad.model.CRgetPosterList.CRgetPosterListParams;
+import com.psi.androidhttpclient.cr.bus.ad.model.CRgetPosterList.CRgetPosterListResponse;
+import com.psi.androidhttpclient.cr.bus.ad.model.CRgetPosterList.CRgetPosterListResult;
+import com.psi.androidhttpclient.cr.common.client.CRClient;
 import rx.Observable;
 
 /**

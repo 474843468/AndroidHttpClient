@@ -3,7 +3,7 @@ package com.psi.androidhttpclient.transfer.payee.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.TextUtils;
-import com.boc.bocsoft.mobile.bocmobile.base.utils.PinYinUtil;
+import com.psi.androidhttpclient.util1.PinYinUtil;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,7 +1,6 @@
 package com.psi.androidhttpclient.util1;
 
 import com.psi.androidhttpclient.common.ApplicationConst;
-import com.psi.androidhttpclient.common.ApplicationContext;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -239,6 +238,7 @@ public class AccountTypeUtil {
         types.addAll(AccountTypeUtil.getCurrentTypeWithOutBro());
         types.addAll(AccountTypeUtil.getFinanceType());
         types.addAll(AccountTypeUtil.getMoneyType());
-        return ApplicationContext.getInstance().getChinaBankAccountList(types).size();
+        return 1;
+       // return ApplicationContext.getInstance().getChinaBankAccountList(types).size();
     }
 }

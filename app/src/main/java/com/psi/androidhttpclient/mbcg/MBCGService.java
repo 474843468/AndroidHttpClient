@@ -1,8 +1,8 @@
 package com.psi.androidhttpclient.mbcg;
 
-import com.boc.bocsoft.mobile.mbcg.activityinfo.ActivityInfoParams;
-import com.boc.bocsoft.mobile.mbcg.activityinfo.ActivityInfoRespone;
-import com.boc.bocsoft.mobile.mbcg.activityinfo.ActivityInfoResult;
+import com.psi.androidhttpclient.mbcg.activityinfo.ActivityInfoParams;
+import com.psi.androidhttpclient.mbcg.activityinfo.ActivityInfoRespone;
+import com.psi.androidhttpclient.mbcg.activityinfo.ActivityInfoResult;
 import rx.Observable;
 
 /**

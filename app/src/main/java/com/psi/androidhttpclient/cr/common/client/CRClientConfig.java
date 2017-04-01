@@ -1,7 +1,6 @@
 package com.psi.androidhttpclient.cr.common.client;
 
-
-import com.boc.bocsoft.mobile.common.client.model.RequestParams;
+import com.psi.androidhttpclient.client.model.RequestParams;
 
 /**
  * CRClient的配置

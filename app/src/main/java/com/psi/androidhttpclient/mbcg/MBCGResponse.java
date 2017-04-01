@@ -1,6 +1,6 @@
 package com.psi.androidhttpclient.mbcg;
 
-import com.boc.bocsoft.mobile.bocyun.common.model.YunHeader;
+import com.psi.androidhttpclient.bocyun.common.model.YunHeader;
 import java.io.Serializable;
 
 /**

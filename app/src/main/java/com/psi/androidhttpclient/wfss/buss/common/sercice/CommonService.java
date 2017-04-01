@@ -1,9 +1,9 @@
 package com.psi.androidhttpclient.wfss.buss.common.sercice;
 
-import com.boc.bocsoft.mobile.wfss.buss.common.model.WFSSSearchAllProParams;
-import com.boc.bocsoft.mobile.wfss.buss.common.model.WFSSSearchAllProResponse;
-import com.boc.bocsoft.mobile.wfss.buss.common.model.WFSSSearchAllProResult;
-import com.boc.bocsoft.mobile.wfss.common.client.WFSSClient;
+import com.psi.androidhttpclient.wfss.buss.common.model.WFSSSearchAllProParams;
+import com.psi.androidhttpclient.wfss.buss.common.model.WFSSSearchAllProResponse;
+import com.psi.androidhttpclient.wfss.buss.common.model.WFSSSearchAllProResult;
+import com.psi.androidhttpclient.wfss.common.client.WFSSClient;
 import rx.Observable;
 
 /**

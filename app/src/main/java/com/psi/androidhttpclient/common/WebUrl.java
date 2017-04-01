@@ -42,9 +42,9 @@ public class WebUrl {
     //生产
     //public static final  String URL_SHARE = "https://ccsa.ebsnew.boc.cn/shareFinace/Framework/index.html?entrance=shareFinace_financeDetail&productCode=%s&productKind=%s&v=%s";
 
-    public static String getDetailShareUrl(String code,String kind){
-        return String.format(URL_SHARE,code,kind,ApplicationContext.getInstance().getVersion());
-    }
+    //public static String getDetailShareUrl(String code,String kind){
+    //    return String.format(URL_SHARE,code,kind,ApplicationContext.getInstance().getVersion());
+    //}
 
     /**
      * 分享产品列表URL
@@ -52,9 +52,9 @@ public class WebUrl {
     private static final String URL_SHARE_PRODUCT = "http://boc.javascriptchina.com/shareFinace/Framework/index.html?entrance=shareFinace_financeList&v=%s";
     //生产
     //public static final String URL_SHARE_PRODUCT = "https://ccsa.ebsnew.boc.cn/shareFinace/Framework/index.html?entrance=shareFinace_financeList&v=%s";
-    public static String getListShareUrl(){
-        return String.format(URL_SHARE_PRODUCT,ApplicationContext.getInstance().getVersion());
-    }
+    //public static String getListShareUrl(){
+    //    return String.format(URL_SHARE_PRODUCT,ApplicationContext.getInstance().getVersion());
+    //}
 
     /*-------------------------start 信用卡 start---------------------------*/
     // 激活信用卡
