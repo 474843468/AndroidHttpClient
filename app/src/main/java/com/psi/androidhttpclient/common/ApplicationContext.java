@@ -10,11 +10,11 @@ import com.orhanobut.logger.Logger;
 /**
  * Created by zjq on 2016/5/3.
  */
-public class App extends Application {
+public class ApplicationContext extends Application {
 
   private static Context mContext;
   //private static User mUser;
-  private static App instance;
+  private static ApplicationContext instance;
   @Override public void onCreate() {
     super.onCreate();
     instance = this;
@@ -23,7 +23,7 @@ public class App extends Application {
     //initDb();
     initStetho();
   }
- public static App getInstance(){
+ public static ApplicationContext getInstance(){
    return instance;
  }
   // @formatter:on

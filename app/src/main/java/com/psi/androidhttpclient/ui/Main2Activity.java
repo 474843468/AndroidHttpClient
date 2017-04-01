@@ -94,7 +94,7 @@ public class Main2Activity extends BaseToolbarActivity1 {
   }
 
   public void activity7(View v) {
-    Intent intent = new Intent(Main2Activity.this, MvvpMainActivity.class);
+    Intent intent = new Intent(Main2Activity.this, MainActivity.class);
     startActivity(intent);
   }
 
