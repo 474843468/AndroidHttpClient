@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TagFlowLayout">
+        <attr name="auto_select_effect" format="boolean"></attr>
+        <attr name="max_select" format="integer"></attr>
+        <attr name="gravity">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ScanBoxView">
+        <!-- 扫描框的宽度-->
+        <attr name="boxWidth" format="dimension|reference" />
+        <!-- 扫描框的高度-->
+        <attr name="boxHeight" format="dimension|reference" />
+        <!-- 扫描框背景-->
+        <attr name="boxBackground" format="reference" />
+        <!-- 扫描线-->
+        <attr name="scanLine" format="reference" />
+        <!-- 扫描线topMargin-->
+        <attr name="scanLineTopMargin" format="dimension|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="TitleBarView">
+        <attr name="iconLeft" format="reference"/>
+        <attr name="iconRight" format="reference"/>
+        <attr name="titleColor" format="color|reference"/>
+        <attr name="titleString" format="string|reference"/>
+        <attr name="barBackground" format="color|reference"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Main2Activity">
+
+  <include
+      android:id="@+id/app_bar_layout"
+      layout="@layout/layout_appbar" />
+
+  <Button
+      android:id="@+id/socketio__1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/app_bar_layout"
+      android:text="socketio" />
+
+  <Button
+      android:id="@+id/socketio__2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/socketio__1"
+      android:text="MAIN3ACTIVITY" />
+
+  <Button
+      android:id="@+id/socketio__3"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/socketio__2"
+      android:onClick="actionbar_menu"
+      android:text="actionbar_menu" />
+
+  <Button
+      android:id="@+id/socketio__4"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/socketio__3"
+      android:onClick="materialSearchView"
+      android:text="materialSearchView" />
+
+  <Button
+      android:id="@+id/socketio__5"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/socketio__4"
+      android:onClick="actionbar_search"
+      android:text="actionbar_search" />
+
+  <LinearLayout
+      android:layout_below="@+id/socketio__5"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="activity7"
+        android:text="MvvpMainActivity" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="activity8"
+        android:text="activity8" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="activity9"
+        android:text="activity9" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="activity10"
+        android:text="activity10" />
+
+  </LinearLayout>
+</RelativeLayout>

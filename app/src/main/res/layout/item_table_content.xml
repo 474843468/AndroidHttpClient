@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_table_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="2dp"
+    app:contentPadding="2dp">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <RelativeLayout
+        style="@style/WrapWrap"
+        android:id="@+id/rl_temp"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:background="@drawable/bg_table_list_img">
+
+      <ImageView
+          style="@style/WrapWrap"
+          android:id="@+id/iv_temp"
+          android:layout_centerHorizontal="true"
+          android:scaleType="centerCrop"
+          android:src="@mipmap/ic_table_empty"/>
+
+      <TextView
+          style="@style/WrapWrap"
+          android:id="@+id/tv_people_num"
+          android:layout_below="@id/iv_temp"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="5dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/rl_temp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical">
+
+      <TextView
+          android:id="@+id/tv_table_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:padding="5dp"
+          android:textSize="16sp"/>
+
+      <TextView
+          android:id="@+id/tv_table_duration"
+          android:visibility="gone"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:padding="5dp"
+          android:textSize="16sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_table_status"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="3dp"
+        android:textSize="16sp"
+        android:textColor="@color/table_status_overtime"
+        android:text="超时"/>
+  </RelativeLayout>
+
+</android.support.v7.widget.CardView>

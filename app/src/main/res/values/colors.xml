@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#9ccc65</color>
+  <color name="colorPrimaryDark">#65aa01</color>
+  <color name="colorAccent">#FF5722</color>
+
+  <color name="primary_text">#212121</color>
+  <color name="secondary_text">#727272</color>
+  <color name="icons">#FFFFFF</color>
+  <color name="divider">#B6B6B6</color>
+
+
+
+  <color name="colorBottomFindBill">#9ccc65</color>
+  <color name="colorBottomTemporary">#ec407a</color>
+  <color name="colorBottomScanCode">#ab47bc</color>
+  <color name="colorBottomNotifications">#29b6f6</color>
+  <color name="colorBottomUser">#e84e40</color>
+
+
+  <color name="white">#ffffffff</color>
+  <color name="page1">#ff21B8AC</color>
+  <color name="page2">#ff218AB8</color>
+  <color name="page3">#ff21A5B8</color>
+  <color name="page4">#ff1F8B9B</color>
+  <color name="page4_anim_view">#e55555</color>
+
+  <color name="rocket">#e55555</color>
+  <color name="avatar1">#e1f4f8</color>
+  <color name="avatar2">#c6b9e7</color>
+  <color name="avatar3">#f8e71d</color>
+  <color name="avatar4">#65aa01</color>
+  <color name="avatar5">#4ee4c1</color>
+
+  <color name="table_status_occupy">#29b6f6</color>
+  <color name="table_status_overtime">#FF5722</color>
+  <color name="table_duration">#29b6f6</color>
+
+  <color name="detail_multiple_unit_tag">#ec407a</color>
+  <color name="detail_wait_tag">#ab47bc</color>
+  <color name="detail_status_ordered">#29b6f6</color>
+  <color name="detail_status_refund">#e84e40</color>
+  <color name="detail_serving">#ff6d00</color>
+  <color name="detail_not_serving">#ffb74d</color>
+
+  <color name="menu_btn_normal">#00000000</color>
+  <color name="menu_btn_pressed">#40ffffff</color>
+
+  <color name="light_gray">#efefef</color>
+  <color name="gray">#e7e4e4</color>
+  <!--<color name="black">#000</color>-->
+
+
+  <!-- 标题栏背景色红 -->
+  <color name="boc_titlebar_bg_red">#ca2b4f</color>
+  <!-- 通用导航栏背景色白 -->
+  <color name="boc_titlebar_bg_white">#ffffff</color>
+  <!--标题栏字体颜色白 -->
+  <color name="boc_titlebar_text_white">#ffffff</color>
+  <!-- 标题栏字体颜色黑-->
+  <color name="boc_titlebar_text_black">#222222</color>
+
+
+
+  <color name="bocroa_background">#e8ecec</color>
+  <color name="bocroa_gray_b3bbc2">#b3bbc2</color>
+  <color name="bocroa_bf2e4d">#bf2e4d</color>
+  <color name="bocroa_8873ab">#8873ab</color>
+  <color name="bocroa_333333">#333333</color>
+  <color name="bocroa_dbdee3">#dbdee3</color>
+  <color name="bocroa_blank">#000000</color>
+  <color name="bocroa_blue">#007aff</color>
+  <color name="bocroa_cccccc">#cccccc</color>
+  <color name="bocroa_6988c6">#6988c6</color>
+  <color name="bocroa_b5b5b6">#b5b5b6</color>
+  <color name="bocroa_text_color_red">#b50029</color>
+  <color name="bocroa_e8ecec">#e8ecec</color>
+  <color name="bocroa_d3dada">#d3dada</color>
+  <color name="bocroa_b3bbc4">#b3bbc4</color>
+  <color name="bocroa_ef3636">#ef3636</color>
+  <color name="bocroa_b81c1e">#b81c1e</color>
+  <color name="bocroa_79797c">#79797c</color>
+  <color name="bocroa_eff2f2">#eff2f2</color>
+  <color name="bocroa_e5e8e9">#e5e8e9</color>
+  <color name="bocroa_dee3e4">#dee3e4</color>
+  <!-- 单色区域 -->
+  <!-- 透明颜色 -->
+  <color name="bocroa_transparent">#00000000</color>
+  <!-- 半透明颜色 -->
+  <color name="bocroa_parttransparent">#33000000</color>
+  <!-- 白色颜色 -->
+  <color name="bocroa_white">#ffffff</color>
+  <color name="bocroa_90_white">#e5ffffff</color>
+  <!-- 黑色颜色 -->
+  <color name="bocroa_black">#000000</color>
+  <!-- 红色颜色 -->
+  <color name="bocroa_red_boc">#b50029</color>
+
+  <!-- 白色字体颜色 所有白色字体 -->
+  <color name="bocroa_text_color_white">#ffffff</color>
+  <color name="bocroa_comment_body_bg_dark_gray">#efeff4</color>
+</resources>

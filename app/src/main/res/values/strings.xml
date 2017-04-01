@@ -1,0 +1,24 @@
+<resources>
+  <string name="app_name">AndroidHttpClient</string>
+  <string name="exit">011</string>
+  <string name="about">022</string>
+  <string name="about121">121</string>
+  <string name="about111">111</string>
+  <string name="about122">122</string>
+  <string name="about012">012</string>
+  <string name="about132">132</string>
+  <string name="about312">312</string>
+  <string name="title_activity_main4">Main4Activity</string>
+  <string-array name="query_suggestions">
+    <item>Android</item>
+    <item>iOS</item>
+    <item>SCALA</item>
+    <item>Ruby</item>
+    <item>JavaScript</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>44</item>
+    <item>554</item>
+  </string-array>
+</resources>
