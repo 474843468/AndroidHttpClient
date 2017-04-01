@@ -1,22 +1,13 @@
 package com.psi.androidhttpclient.ui.fragment;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Looper;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 import com.psi.androidhttpclient.R;
-import com.psi.androidhttpclient.common.ApplicationContext;
 import com.psi.androidhttpclient.ui.fragment.rx.lifecycle.RxLifecycleManager;
 import com.psi.androidhttpclient.util1.LogUtils;
 import com.psi.androidhttpclient.widget.BottomTabIndicator;
-import com.psi.androidhttpclient.widget.TabIndicatorView;
 import com.psi.androidhttpclient.widget.tab.MainTabView;
-import java.util.ArrayList;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
 
 /**
  * Created by Administrator on 2017-04-01.
@@ -43,66 +34,66 @@ public class MainFragment extends BussFragment {
   public void initView() {
     flContent = (FrameLayout) root.findViewById(R.id.fl_content);
     tbMainTabHost = (MainTabView) root.findViewById(R.id.tb_main_tab_host);
-    initMainTabHost();
+    //initMainTabHost();
   }
 
   /**
    * 初始化主导航
    */
-  private void initMainTabHost() {
-    tbMainTabHost.setup(mContext, mActivity.getSupportFragmentManager(), R.id.fl_content);
-    ArrayList<TabIndicatorView> tabs = new ArrayList();
-    BottomTabIndicator concentIndicatorView = new BottomTabIndicator(mContext);
-    concentIndicatorView.setTagId("concent").setIcon(mContext.getResources().getDrawable(R.drawable.boc_tab_icon_home))
-        .setTitle("首页").setFragmentClass(HomeFragment.class);
+  //private void initMainTabHost() {
+  //  tbMainTabHost.setup(mContext, mActivity.getSupportFragmentManager(), R.id.fl_content);
+  //  ArrayList<TabIndicatorView> tabs = new ArrayList();
+  //  BottomTabIndicator concentIndicatorView = new BottomTabIndicator(mContext);
+  //  concentIndicatorView.setTagId("concent").setIcon(mContext.getResources().getDrawable(R.drawable.boc_tab_icon_home))
+  //      .setTitle("首页").setFragmentClass(HomeFragment.class);
+  //
+  //  tabs.add(concentIndicatorView);
+  //
+  //  BottomTabIndicator investIndicatorView = new BottomTabIndicator(mContext);
+  //  investIndicatorView.setTagId("invest").setIcon(mContext.getResources().getDrawable(R.drawable.boc_tab_icon_invest))
+  //      .setTitle("投资").setFragmentClass(InvestFragment.class);
+  //  tabs.add(investIndicatorView);
+  //
+  //  BottomTabIndicator lifeIndicatorView = new BottomTabIndicator(mContext);
+  //  lifeIndicatorView.setTagId("life").setIcon(mContext.getResources().getDrawable(R.drawable.boc_tab_icon_life))
+  //      .setTitle("生活").setFragmentClass(LifeFragment.class);
+  //  tabs.add(lifeIndicatorView);
+  //
+  //  Class<Fragment> infoFragment= null;
+  //  try {
+  //    infoFragment  = (Class<Fragment>) Class.forName("com.chinamworld.bocmbci.biz.infoserve.InfoServeMainFragment");
+  //  } catch (ClassNotFoundException e) {
+  //    e.printStackTrace();
+  //  }
+  //  if(infoFragment !=null){
+  //    ApplicationContext.getInstance().setHasLianLong(true);
+  //    msgIndicatorView = new BottomTabIndicator(mContext);
+  //    msgIndicatorView.setTagId("message").setIcon(mContext.getResources().getDrawable(R.drawable.boc_tab_icon_goutong))
+  //        .setTitle("沟通").setFragmentClass(infoFragment);
+  //    tabs.add(msgIndicatorView);
+  //    hasMessageFragment = true;
+  //  }
+  //
+  //  BottomTabIndicator personalIndicatorView = new BottomTabIndicator(mContext);
+  //  personalIndicatorView.setTagId("personal").setIcon(mContext.getResources().getDrawable(R.drawable.boc_tab_icon_personal))
+  //      .setTitle("我的").setFragmentClass(MineFragment.class);
+  //  tabs.add(personalIndicatorView);
+  //  tbMainTabHost.initTab(tabs);
+  //
+  //  tbMainTabHost.setBeforeTabSelectionChanged(new MainTabView.OnBeforeTabSelectionChanged() {
+  //    @Override public boolean onBeforeTabSelectionChanged(int tabIndex, boolean clicked) {
+  //
+  //      if(hasMessageFragment && tabIndex == 3){
+  //        //msgIndicatorView.setBadgeNumber(false,0);
+  //      }
+  //      if(tabIndex == 2/*|| hasMessageFragment&&tabIndex == 3*/){
+  //        //return actionTabClickCheckLogin(tabIndex);
+  //      }
+  //      return false;
+  //    }
+  //  });
 
-    tabs.add(concentIndicatorView);
-
-    BottomTabIndicator investIndicatorView = new BottomTabIndicator(mContext);
-    investIndicatorView.setTagId("invest").setIcon(mContext.getResources().getDrawable(R.drawable.boc_tab_icon_invest))
-        .setTitle("投资").setFragmentClass(InvestFragment.class);
-    tabs.add(investIndicatorView);
-
-    BottomTabIndicator lifeIndicatorView = new BottomTabIndicator(mContext);
-    lifeIndicatorView.setTagId("life").setIcon(mContext.getResources().getDrawable(R.drawable.boc_tab_icon_life))
-        .setTitle("生活").setFragmentClass(LifeFragment.class);
-    tabs.add(lifeIndicatorView);
-
-    Class<Fragment> infoFragment= null;
-    try {
-      infoFragment  = (Class<Fragment>) Class.forName("com.chinamworld.bocmbci.biz.infoserve.InfoServeMainFragment");
-    } catch (ClassNotFoundException e) {
-      e.printStackTrace();
-    }
-    if(infoFragment !=null){
-      ApplicationContext.getInstance().setHasLianLong(true);
-      msgIndicatorView = new BottomTabIndicator(mContext);
-      msgIndicatorView.setTagId("message").setIcon(mContext.getResources().getDrawable(R.drawable.boc_tab_icon_goutong))
-          .setTitle("沟通").setFragmentClass(infoFragment);
-      tabs.add(msgIndicatorView);
-      hasMessageFragment = true;
-    }
-
-    BottomTabIndicator personalIndicatorView = new BottomTabIndicator(mContext);
-    personalIndicatorView.setTagId("personal").setIcon(mContext.getResources().getDrawable(R.drawable.boc_tab_icon_personal))
-        .setTitle("我的").setFragmentClass(MineFragment.class);
-    tabs.add(personalIndicatorView);
-    tbMainTabHost.initTab(tabs);
-
-    tbMainTabHost.setBeforeTabSelectionChanged(new MainTabView.OnBeforeTabSelectionChanged() {
-      @Override public boolean onBeforeTabSelectionChanged(int tabIndex, boolean clicked) {
-
-        if(hasMessageFragment && tabIndex == 3){
-          //msgIndicatorView.setBadgeNumber(false,0);
-        }
-        if(tabIndex == 2/*|| hasMessageFragment&&tabIndex == 3*/){
-          //return actionTabClickCheckLogin(tabIndex);
-        }
-        return false;
-      }
-    });
-
-  }
+ // }
 
   @Override
   protected boolean isHaveTitleBarView() {
@@ -150,16 +141,16 @@ public class MainFragment extends BussFragment {
 
   /**
    * 跳转到登录页面
-   */
-  public void startToLogin(Activity activity,  LoginCallback callback){
-    Intent intent = new Intent();
-    intent.setClass(activity, LoginBaseActivity.class);
-    if (callback != null) {
-      LoginContext.instance.setCallback(callback);
-    }
-
-    activity.startActivity(intent);
-  }
+  // */
+  //public void startToLogin(Activity activity,  LoginCallback callback){
+  //  Intent intent = new Intent();
+  //  intent.setClass(activity, LoginBaseActivity.class);
+  //  if (callback != null) {
+  //    LoginContext.instance.setCallback(callback);
+  //  }
+  //
+  //  activity.startActivity(intent);
+  //}
 
   public void setCurrentTab(int index){
     LogUtils.d(TAG,"--mainfragment setcurrentTab:"+index+"  "+tbMainTabHost +" isadd:"+isAdded()+" ");
@@ -177,19 +168,19 @@ public class MainFragment extends BussFragment {
   private RxLifecycleManager lifecycleManager;
   @Override public void initData() {
     super.initData();
-    lifecycleManager = new RxLifecycleManager();
-    BocEventBus.getInstance().getBusObservable().ofType(BadgeChangeEvent.class)
-        .compose(lifecycleManager.<BadgeChangeEvent>bindToLifecycle())
-        .subscribeOn(Schedulers.io())
-        .observeOn(AndroidSchedulers.mainThread())
-        .subscribe(new Action1<BadgeChangeEvent>() {
-          @Override public void call(BadgeChangeEvent badgeChangeEvent) {
-            if(msgIndicatorView == null)return;
-            LogUtils.d(TAG,"-------event:"+ (Looper.getMainLooper()==Looper.myLooper()));
-
-            msgIndicatorView.setBadgeNumber(badgeChangeEvent.isShow(),badgeChangeEvent.getCount());
-          }
-        });
+    //lifecycleManager = new RxLifecycleManager();
+    //BocEventBus.getInstance().getBusObservable().ofType(BadgeChangeEvent.class)
+    //    .compose(lifecycleManager.<BadgeChangeEvent>bindToLifecycle())
+    //    .subscribeOn(Schedulers.io())
+    //    .observeOn(AndroidSchedulers.mainThread())
+    //    .subscribe(new Action1<BadgeChangeEvent>() {
+    //      @Override public void call(BadgeChangeEvent badgeChangeEvent) {
+    //        if(msgIndicatorView == null)return;
+    //        LogUtils.d(TAG,"-------event:"+ (Looper.getMainLooper()==Looper.myLooper()));
+    //
+    //        msgIndicatorView.setBadgeNumber(badgeChangeEvent.isShow(),badgeChangeEvent.getCount());
+    //      }
+    //    });
   }
 
   @Override public void onDestroy() {

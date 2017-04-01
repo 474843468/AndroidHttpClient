@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity1">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+      <include
+          android:id="@+id/app_bar_layout"
+          layout="@layout/layout_appbar"
+          />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_send_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textAllCaps="false"
+        android:text="login"/>
+
+    <Button
+        android:id="@+id/btn_send_test2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="tableAreaList"/>
+
+    <Button
+        android:id="@+id/btn_send_test3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="tableList"/>
+
+    <Button
+        android:id="@+id/btn_send_test4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="productCategoryList"/>
+
+    <Button
+        android:id="@+id/btn_send_test5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="productList"/>
+
+    <Button
+        android:id="@+id/btn_send_test6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="productDetailsList"/>
+
+    <Button
+        android:id="@+id/btn___7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="orderInfo"/>
+
+    <Button
+        android:id="@+id/btn___8___"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="servingProd"/>
+
+    <Button
+        android:id="@+id/btn___9___"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="optReason"/>
+
+    <Button
+        android:id="@+id/btn___10___"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="refundProd"/>
+
+    <Button
+        android:id="@+id/btn___11___"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="addProd"/>
+
+    <Button
+        android:id="@+id/btn___12___"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="productRemarks"/>
+
+    <Button
+        android:id="@+id/btn___13___"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="modifyBill"/>
+
+    <Button
+        android:id="@+id/btn___14___"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="confirmOrder"/>
+
+    <Button
+        android:id="@+id/btn___15___"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="picture"/>
+
+    <Button
+        android:id="@+id/btn___16___"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="socetio"/>
+
+    <Button
+        android:id="@+id/btn___17___"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="get"/>
+       <Button
+        android:id="@+id/btn___18___"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="get"/>
+       <Button
+        android:id="@+id/btn___19___"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="get"/>
+       <Button
+        android:id="@+id/btn___20___"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:textAllCaps="false"
+        android:text="get"/>
+    <TextView
+        android:id="@+id/tv_response1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="0ResponseResponseResp1onseResponseResponseResponseResponseRespo2nseResponseResponseResponseResponseResponse3ResponseResponseResponseRes4ponseResponse5"/>
+    <TextView
+        android:id="@+id/tv_response"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Response"/>
+  </LinearLayout>
+</ScrollView>

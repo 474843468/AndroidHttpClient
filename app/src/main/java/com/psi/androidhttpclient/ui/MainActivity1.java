@@ -60,7 +60,7 @@ public class MainActivity1 extends BaseToolbarActivity1 {
   private Socket mSocket;
 
   @Override protected int provideContentViewId() {
-    return R.layout.activity_main;
+    return R.layout.activity_main1;
   }
 
   @Override protected String provideToolbarTitle() {

@@ -1,9 +1,9 @@
 package com.psi.androidhttpclient.client.network;
 
-import com.boc.bocsoft.mobile.common.client.exception.HttpException;
-import com.boc.bocsoft.mobile.common.utils.LoggerUtils;
-import com.boc.bocsoft.mobile.common.utils.StringUtils;
 import com.google.gson.TypeAdapter;
+import com.psi.androidhttpclient.client.exception.HttpException;
+import com.psi.androidhttpclient.util1.LoggerUtils;
+import com.psi.androidhttpclient.util1.StringUtils;
 import java.io.IOException;
 import okhttp3.Response;
 import rx.Observable;

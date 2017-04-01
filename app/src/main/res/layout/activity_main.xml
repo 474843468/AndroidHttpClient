@@ -1,250 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity1">
+    android:orientation="vertical"
+    >
 
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:orientation="vertical">
-    <RelativeLayout
+    <FrameLayout
+        android:id="@+id/fl_content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-      <include
-          android:id="@+id/app_bar_layout"
-          layout="@layout/layout_appbar"
-          />
-    </RelativeLayout>
-    <Button
-        android:id="@+id/btn_send_test"
-        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        >
+
+    </FrameLayout>
+    <com.psi.androidhttpclient.widget.tab.MainTabView
+        android:id="@+id/tb_main_tab_host"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="@dimen/boc_divider_1px"
+        android:background="@color/boc_titlebar_bg_white"
+        />
 
-        android:text="login"
-        android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_send_test2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_marginTop="5dp"
+</LinearLayout>
 
-        android:text="tableAreaList"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btn_send_test3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:text="tableList"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btn_send_test4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:text="productCategoryList"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btn_send_test5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:text="productList"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btn_send_test6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:text="productDetailsList"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btn___7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:text="orderInfo"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btn___8___"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:text="servingProd"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btn___9___"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:text="optReason"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btn___10___"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:text="refundProd"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btn___11___"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:text="addProd"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btn___12___"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:text="productRemarks"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btn___13___"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:text="modifyBill"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btn___14___"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:text="confirmOrder"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btn___15___"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:text="picture"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btn___16___"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:text="socetio"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btn___17___"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:text="get"
-        android:textAllCaps="false" />
-       <Button
-        android:id="@+id/btn___18___"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:text="get"
-        android:textAllCaps="false" />
-       <Button
-        android:id="@+id/btn___19___"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:text="get"
-        android:textAllCaps="false" />
-       <Button
-        android:id="@+id/btn___20___"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_send_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-
-        android:text="get"
-        android:textAllCaps="false" />
-    <TextView
-        android:id="@+id/tv_response1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ellipsize="marquee"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:marqueeRepeatLimit="marquee_forever"
-        android:scrollHorizontally="true"
-        android:singleLine="true"
-        android:text="0ResponseResponseResp1onseResponseResponseResponseResponseRespo2nseResponseResponseResponseResponseResponse3ResponseResponseResponseRes4ponseResponse5" />
-    <TextView
-        android:id="@+id/tv_response"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Response" />
-  </LinearLayout>
-</ScrollView>

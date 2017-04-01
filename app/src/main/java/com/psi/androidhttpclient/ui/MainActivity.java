@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.widget.Toast;
-import com.psi.androidhttpclient.common.ApplicationContext;
 import com.psi.androidhttpclient.eventBus.BocEventBus;
 import com.psi.androidhttpclient.eventBus.event.GoHomeEvent;
 import com.psi.androidhttpclient.eventBus.event.GoInvestEvent;
@@ -88,7 +87,7 @@ public class MainActivity extends BussActivity {
     }
     if(ACTION_HOMELOGIN_TAB.equals(intent.getAction())){
       Intent loginIntent = new Intent();
-      intent.setClass(MainActivity.this,LoginBaseActivity.class);
+    //  intent.setClass(MainActivity.this,LoginBaseActivity.class);
       startActivity(loginIntent);
     }
   }
@@ -191,12 +190,12 @@ public class MainActivity extends BussActivity {
   /**
    * session超期时处理
    */
-  protected void onSessionTimeout(){
-    //ApplicationContext.getInstance().logout();
-    //Intent intent = new Intent();
-    //intent.setClass(mContext, LoginBaseActivity.class);
-    //startActivity(intent);
-  }
+  //protected void onSessionTimeout(){
+  // // ApplicationContext.getInstance().logout();
+  //  Intent intent = new Intent();
+  //  intent.setClass(mContext, LoginBaseActivity.class);
+  //  startActivity(intent);
+  //}
 
  /*   public void setIsToHome(boolean isToHome){
         this.isToHome = isToHome;
@@ -239,9 +238,9 @@ public class MainActivity extends BussActivity {
         if (MainActivity.this != ActivityManager.getAppManager().currentActivity()) {
           ActivityManager.getAppManager().popToActivity(MainActivity.class);
         }
-        Intent intent = new Intent();
-        intent.setClass(mContext, LoginBaseActivity.class);
-        startActivity(intent);
+        //Intent intent = new Intent();
+        //intent.setClass(mContext, LoginBaseActivity.class);
+        //startActivity(intent);
       }
     }
   };
