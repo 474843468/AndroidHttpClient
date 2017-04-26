@@ -71,10 +71,7 @@ public class Main3Activity extends BaseToolbarActivity1 {
     Logger.e(selectedList.size() + "");
   }
 
-  public void main4activity(View v) {
-    Intent intent = new Intent(Main3Activity.this, Main4Activity.class);
-    startActivity(intent);
-  }
+
 
   public void zxingscan(View v) {
     Intent intent = new Intent(Main3Activity.this, ScanActivity.class);

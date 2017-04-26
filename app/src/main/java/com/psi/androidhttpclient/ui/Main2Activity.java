@@ -4,10 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.app.AppCompatDelegate;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 import com.mingle.entity.MenuEntity;
@@ -15,7 +15,11 @@ import com.mingle.sweetpick.DimEffect;
 import com.mingle.sweetpick.RecyclerViewDelegate;
 import com.mingle.sweetpick.SweetSheet;
 import com.orhanobut.logger.Logger;
+import com.psi.androidhttpclient.ItemTouchHelper.Main10Activity;
 import com.psi.androidhttpclient.R;
+import com.psi.androidhttpclient.customBehavior.Main13Activity;
+import com.psi.androidhttpclient.defineBehaviorFAB.Main9Activity;
+import com.psi.androidhttpclient.myCoordinateLayout.Main11Activity;
 import com.psi.androidhttpclient.utils.ToastUtils;
 import io.socket.client.IO;
 import io.socket.client.Socket;
@@ -23,6 +27,12 @@ import io.socket.emitter.Emitter;
 import java.net.URISyntaxException;
 
 public class Main2Activity extends BaseToolbarActivity1 {
+  {
+    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO);
+  }
+
+  String ss =
+      "{goods : [{'id':'17','title':'巧克力','price':'10.00','goodnums':'5'},{'id':'18','title':'青岛9度','price':'4.00','goodnums':'10'}] comments : [{'id':'3','avatar':'http://static.mamtree.com/avatar/default.png','nickname':'小企鹅','score':'4','dateline':'2017-04-01','content':'这个还不错呢','rcontent':'123按时大多数是','images':[]}] plus : 10}";
   private Socket mSocket;
   private Handler handler = new Handler() {
     @Override public void handleMessage(Message msg) {
@@ -59,57 +69,83 @@ public class Main2Activity extends BaseToolbarActivity1 {
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     // setContentView(R.layout.activity_main2);
-    Button s1 = (Button) findViewById(R.id.socketio__1);
-    s1.setOnClickListener(new View.OnClickListener() {
-      @Override public void onClick(View v) {
-        socketio("c", "123456", "/productList");
-      }
-    });
-    Button s2 = (Button) findViewById(R.id.socketio__2);
-    Button s3 = (Button) findViewById(R.id.socketio__3);
-    Button s4 = (Button) findViewById(R.id.socketio__4);
     mContentView = (RelativeLayout) findViewById(R.id.content);
     initBottomSheet();
-    s2.setOnClickListener(new View.OnClickListener() {
-      @Override public void onClick(View v) {
-        Intent intent = new Intent(Main2Activity.this, Main3Activity.class);
-        startActivity(intent);
-      }
-    });
   }
 
-  public void materialSearchView(View v) {
-    Intent intent = new Intent(Main2Activity.this, SelectedTableModifyBillActivity.class);
+  public void test1(View v) {
+    getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+    recreate();
+    socketio("c", "123456", "/productList");
+  }
+
+  public void test2(View v) {
+    getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+    recreate();
+  }
+
+  public void main3activity(View v) {
+    Intent intent = new Intent(Main2Activity.this, Main3Activity.class);
     startActivity(intent);
   }
 
-  public void actionbar_menu(View v) {
+  public void main4activity(View v) {
+    Intent intent = new Intent(Main2Activity.this, Main4Activity.class);
+    startActivity(intent);
+  }
+
+  public void Main5Activity(View v) {
+    //String device_model = Build.MODEL;
+    //Logger.e(device_model+"liujian");
     Intent intent = new Intent(Main2Activity.this, Main5Activity.class);
     startActivity(intent);
   }
 
+  public void material_SearchView(View v) {
+    Intent intent = new Intent(Main2Activity.this, SelectedTableModifyBillActivity.class);
+    startActivity(intent);
+  }
+
   public void actionbar_search(View v) {
+
+    //Gson gson = new Gson();
+    //Bean bean = gson.fromJson(ss, Bean.class);
+    //int size = bean.getGoods().size();
+    //Logger.e(size+"---liuj");
     Intent intent = new Intent(Main2Activity.this, Main6Activity.class);
     startActivity(intent);
   }
 
   public void activity7(View v) {
-    Intent intent = new Intent(Main2Activity.this, MainActivity.class);
+    Intent intent = new Intent(Main2Activity.this, Main7Activity.class);
     startActivity(intent);
   }
 
   public void activity8(View v) {
-    Intent intent = new Intent(Main2Activity.this, Main6Activity.class);
+    Intent intent = new Intent(Main2Activity.this, Main8Activity.class);
     startActivity(intent);
   }
 
   public void activity9(View v) {
-    Intent intent = new Intent(Main2Activity.this, Main6Activity.class);
+    Intent intent = new Intent(Main2Activity.this, Main9Activity.class);
     startActivity(intent);
   }
 
   public void activity10(View v) {
-    Intent intent = new Intent(Main2Activity.this, Main6Activity.class);
+    Intent intent = new Intent(Main2Activity.this, Main10Activity.class);
+    startActivity(intent);
+  }  public void activity11(View v) {
+    Intent intent = new Intent(Main2Activity.this, Main11Activity.class);
+    startActivity(intent);
+  }
+ public void activity12(View v) {
+    Intent intent = new Intent(Main2Activity.this, Main12Activity.class);
+    startActivity(intent);
+  } public void activity13(View v) {
+    Intent intent = new Intent(Main2Activity.this, Main13Activity.class);
+    startActivity(intent);
+  } public void activity14(View v) {
+    Intent intent = new Intent(Main2Activity.this, Main14Activity.class);
     startActivity(intent);
   }
 

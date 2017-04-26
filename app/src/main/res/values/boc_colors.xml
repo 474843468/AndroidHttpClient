@@ -63,8 +63,7 @@
     <color name="boc_common_view_line">#d3d2d7</color>
 
     <color name="boc_item_bg_color">#f4f6f6</color>
-    <!--首页grid间隔线颜色-->
-    <color name="line">#ffd3dde6</color>
+
     <!--背景颜色-->
     <color name="griditems_bg">#ffe8ecef</color>
     <!--活一本头部金额背景色-淡绿色-->

@@ -10,55 +10,72 @@
       android:id="@+id/app_bar_layout"
       layout="@layout/layout_appbar" />
 
-  <Button
-      android:id="@+id/socketio__1"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/app_bar_layout"
-      android:text="socketio" />
-
-  <Button
-      android:id="@+id/socketio__2"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/socketio__1"
-      android:text="MAIN3ACTIVITY" />
-
-  <Button
-      android:id="@+id/socketio__3"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/socketio__2"
-      android:onClick="actionbar_menu"
-      android:text="actionbar_menu" />
-
-  <Button
-      android:id="@+id/socketio__4"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/socketio__3"
-      android:onClick="materialSearchView"
-      android:text="materialSearchView" />
-
-  <Button
-      android:id="@+id/socketio__5"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/socketio__4"
-      android:onClick="actionbar_search"
-      android:text="actionbar_search" />
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
   <LinearLayout
-      android:layout_below="@+id/socketio__5"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:layout_below="@+id/app_bar_layout"
       android:orientation="vertical">
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="test1"
+        android:text="test1" />
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="test2"
+        android:text="test2" />
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="main3activity"
+        android:text="main3activity" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="main4activity"
+        android:text="main4activity" />
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:onClick="Main5Activity"
+        android:text="Main5Activity" />
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:onClick="material_SearchView"
+        android:text="material_SearchView" />
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:onClick="actionbar_search"
+        android:text="actionbar_search" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="activity7"
-        android:text="MvvpMainActivity" />
+        android:text="Main7Activity" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,5 +94,37 @@
         android:onClick="activity10"
         android:text="activity10" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="activity11"
+        android:text="activity11" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="activity12"
+        android:text="activity12" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="activity13"
+        android:text="activity13" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="activity14"
+        android:text="activity14" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="activity15"
+        android:text="activity15" />
+
   </LinearLayout>
+</ScrollView>
+
 </RelativeLayout>

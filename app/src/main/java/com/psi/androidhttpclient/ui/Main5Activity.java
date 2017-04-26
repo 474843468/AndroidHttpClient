@@ -1,20 +1,50 @@
 package com.psi.androidhttpclient.ui;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.widget.Toast;
 import com.psi.androidhttpclient.R;
+import com.psi.androidhttpclient.ui.fragment.FragmentA;
+import com.psi.androidhttpclient.ui.fragment.FragmentB;
+import com.psi.androidhttpclient.ui.fragment.FragmentC;
+import com.psi.androidhttpclient.ui.fragment.FragmentD;
+import com.psi.androidhttpclient.ui.fragment.FragmentE;
+import eu.long1.spacetablayout.SpaceTabLayout;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main5Activity extends AppCompatActivity {
-
+  SpaceTabLayout tabLayout;
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main5);
+    //add the fragments you want to display in a List
+    List<Fragment> fragmentList = new ArrayList<>();
+    fragmentList.add(new FragmentA());
+    fragmentList.add(new FragmentB());
+    fragmentList.add(new FragmentC());
+    fragmentList.add(new FragmentD());
+    fragmentList.add(new FragmentE());
+
+    ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
+    tabLayout = (SpaceTabLayout) findViewById(R.id.spaceTabLayout);
+
+    //we need the savedInstanceState to retrieve the position
+    tabLayout.initialize(viewPager, getSupportFragmentManager(), fragmentList, savedInstanceState);
   }
 
+
+  //we need the outState to memorize the position
+  @Override
+  protected void onSaveInstanceState(Bundle outState) {
+    tabLayout.saveState(outState);
+    super.onSaveInstanceState(outState);
+  }
   //初始化菜单
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {

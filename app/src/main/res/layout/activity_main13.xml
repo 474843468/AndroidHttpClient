@@ -1,0 +1,113 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="RtlHardcoded"
+    >
+
+  <android.support.design.widget.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      app:elevation="0dp"
+      >
+
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+        >
+      <!--最重要的是设置： app:layout_scrollFlags="scroll|exitUntilCollapsed"这样它才能随滑动而滚动。-->
+      <!---->
+      <!--在toolbar中设置：app:layout_collapseMode="pin"，使它不随滑动而退出屏幕。在AppbarLayout中设置显示折叠的高度。
+      还可以在包裹的ImageView中设置滑动联动效果： app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.7"。-->
+      <!---->
+      <!--其实，实现也不是特别的复杂，只要理解了这几个新空间的用途，很容易就可以做到自己想要的酷炫效果。好了，如果你有什么疑问欢迎下方留言交流。希望对你有所帮助。-->
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="300dp"
+          android:scaleType="centerCrop"
+          android:src="@drawable/bg"
+          app:layout_collapseMode="parallax"
+          app:layout_collapseParallaxMultiplier="0.9"
+          />
+
+      <FrameLayout
+          android:id="@+id/frameLayout"
+          android:layout_width="match_parent"
+          android:layout_height="80dp"
+          android:layout_gravity="bottom|center_horizontal"
+          android:background="@color/primaryDark"
+          android:orientation="vertical"
+          app:layout_collapseMode="parallax"
+          app:layout_collapseParallaxMultiplier="0.1"
+          >
+
+      </FrameLayout>
+    </android.support.design.widget.CollapsingToolbarLayout>
+  </android.support.design.widget.AppBarLayout>
+
+
+  <android.support.v4.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scrollbars="none"
+      app:behavior_overlapTop="5dp"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+      >
+
+    <include layout="@layout/my_custom"/>
+  </android.support.v4.widget.NestedScrollView>
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/main.toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="80dp"
+      android:background="@color/primaryDark"
+      app:layout_anchor="@id/frameLayout"
+      app:theme="@style/ThemeOverlay.AppCompat.Dark"
+      >
+  </android.support.v7.widget.Toolbar>
+
+  <com.psi.androidhttpclient.widget.CircleImageView
+      android:id="@+id/iv_avatar"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:layout_gravity="right"
+      android:src="@drawable/avator"
+      app:border_color="@android:color/white"
+      app:border_width="2dp"
+      app:finalHeight="30dp"
+      app:layout_behavior="com.psi.androidhttpclient.customBehavior.CustomBehavior"
+      />
+
+  <com.psi.androidhttpclient.widget.CircleImageView
+      android:id="@+id/iv_avatar1"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:layout_gravity="left"
+      android:src="@drawable/avator"
+      app:border_color="@android:color/white"
+      app:border_width="2dp"
+      app:finalHeight="50dp"
+      app:layout_behavior="com.psi.androidhttpclient.customBehavior.CustomBehavior"
+      />
+  <TextView
+
+      android:visibility="invisible"
+      android:id="@+id/tv_title"
+      android:textColor="#fff"
+      android:textSize="18sp"
+      android:gravity="center"
+      android:text="头条"
+      app:layout_behavior="com.psi.androidhttpclient.customBehavior.DrawerBehavior"
+      android:background="@color/primaryDark"
+      android:layout_width="match_parent"
+      android:layout_height="80dp"
+      >
+
+  </TextView>
+</android.support.design.widget.CoordinatorLayout>

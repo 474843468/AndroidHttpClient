@@ -87,7 +87,7 @@ public class MainActivity extends BussActivity {
     }
     if(ACTION_HOMELOGIN_TAB.equals(intent.getAction())){
       Intent loginIntent = new Intent();
-    //  intent.setClass(MainActivity.this,LoginBaseActivity.class);
+    //  intent.setClass(Main10Activity.this,LoginBaseActivity.class);
       startActivity(loginIntent);
     }
   }

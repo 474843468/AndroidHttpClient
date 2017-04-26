@@ -22,7 +22,15 @@
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
   <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.GET_TASKS" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.WRITE_SETTINGS" />
   <application
       android:name="android.support.multidex.MultiDexApplication"
       android:allowBackup="true"
@@ -30,16 +38,27 @@
       android:label="@string/app_name"
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
-    <activity android:name=".ui.MainActivity1" android:theme="@style/AppTheme1">
+    <meta-data
+        android:name="com.baidu.lbsapi.API_KEY"
+        android:value="N4iBNcnxiO001BKHvuwOOqGEtr4uEswy" />
+    <activity
+        android:name=".ui.Main1Activity"
+        android:theme="@style/AppTheme1">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:name=".ui.Main2Activity"  android:theme="@style/AppTheme1"/>
-    <activity android:name=".ui.Main3Activity"  android:theme="@style/AppTheme1"/>
-    <activity android:name=".ui.Main5Activity" />
+    <activity
+        android:name=".ui.Main2Activity"
+        android:theme="@style/AppTheme1" />
+    <activity
+        android:name=".ui.Main3Activity"
+        android:theme="@style/AppTheme1" />
+    <activity
+        android:name=".ui.Main5Activity"
+        android:theme="@style/AppTheme1" />
     <activity
         android:name=".ui.ScanActivity"
         android:theme="@style/AppTheme1" />
@@ -56,8 +75,47 @@
         android:name=".ui.SelectedTableModifyBillActivity"
         android:theme="@style/AppTheme1" />
     <activity android:name=".ui.Main6Activity" />
-    <activity android:name=".ui.Main4Activity"/>
-    <activity android:name="com.psi.androidhttpclient.ui.MainActivity"/>
+    <activity
+        android:name=".ui.Main4Activity"
+        android:theme="@style/AppTheme1" />
+    <activity android:name=".ui.MainActivity" />
+    <activity
+        android:name=".ui.Main7Activity"
+        android:theme="@style/AppTheme1" />
+    <activity android:name=".ui.Main8Activity" />
+    <activity
+        android:name=".defineBehaviorFAB.Main9Activity"
+        android:theme="@style/AppTheme1" />
+    <activity
+        android:name=".defineBehaviorFAB.BackTopActivity"
+        android:theme="@style/AppTheme1" />
+    <activity
+        android:name=".defineBehaviorFAB.BottomSheetBehaviorActivity"
+        android:theme="@style/AppTheme1" />
+    <activity
+        android:name=".defineBehaviorFAB.SwipeDismissBehaviorActivity"
+        android:theme="@style/AppTheme1" />
+    <activity
+        android:name=".defineBehaviorFAB.ZhihuActivity"
+        android:theme="@style/AppTheme1" />
+    <activity
+        android:name=".ItemTouchHelper.Main10Activity"
+        android:theme="@style/AppTheme1" />
+    <activity
+        android:name=".myCoordinateLayout.Main11Activity"
+        android:theme="@style/AppTheme1" />
+    <activity
+        android:name=".ui.Main12Activity"
+        android:theme="@style/AppTheme1" />
+    <activity
+        android:name=".customBehavior.Main13Activity"
+        android:theme="@style/AppTheme1" /> <activity
+        android:name="com.psi.androidhttpclient.customBehavior.EasyBehaviorActivity"
+        android:theme="@style/AppTheme1" />
+    <activity
+        android:name=".ui.Main14Activity"
+        android:label="@string/title_activity_main14"
+        android:theme="@style/AppTheme.NoActionBar"/>
   </application>
 
 </manifest>

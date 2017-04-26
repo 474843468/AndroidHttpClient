@@ -15,12 +15,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:orientation="vertical">
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-       android:onClick="main4activity"
-        android:text="main4activity"
-        android:id="@+id/btn1"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
