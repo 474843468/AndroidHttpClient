@@ -81,4 +81,30 @@ Android开发规范为了规范开发，减小重构成本，总结编码规范�
   <string name="action_edit">Edit</string>
   <string name="title_activity_main14">Main14Activity</string>
   <string name="section_format">Hello World from section: %1$d</string>
+
+
+  <!-- menu -->
+  <string name="search">查找</string>
+  <string name="delete">删除</string>
+  <string name="spread">伸展</string>
+  <string name="move">移动</string>
+  <string name="select_all">全选</string>
+  <string name="select_mode">选择</string>
+  <string name="setting">设置</string>
+  <string name="sort">排序</string>
+  <string name="new_file">新建</string>
+  <string name="sort_edit_before">修改时间,远到近</string>
+  <string name="sort_edit_soon">修改时间,近到远</string>
+  <string name="sort_create_before">创建时间,远到近</string>
+  <string name="sort_create_soon">创建时间,近到远</string>
+  <string name="select">选择</string>
+  <string name="info">详情</string>
+  <string name="share">分享</string>
+  <string name="backup">上传云</string>
+  <string name="effect">特效</string>
+  <string name="edit">编辑</string>
+  <string name="edit_title">修改标题</string>
+
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

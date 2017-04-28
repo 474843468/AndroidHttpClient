@@ -2,7 +2,6 @@
     <!--<string name="app_name">BocMobile</string>-->
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hint_login_number">卡号/手机号</string>
     <string name="security_change_verify">更改</string>
     <string name="security_message_missed">收不到短信？</string>

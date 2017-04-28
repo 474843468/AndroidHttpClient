@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-  compileSdkVersion 24
-  buildToolsVersion "25.0.2"
+  compileSdkVersion rootProject.ext.compileSdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
   defaultConfig {
     applicationId "com.psi.androidhttpclient"
-    minSdkVersion 16
-    targetSdkVersion 24
+    minSdkVersion rootProject.ext.minSdkVersion
+    targetSdkVersion rootProject.ext.targetSdkVersion
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -15,7 +15,7 @@ android {
       // 设置支持的SO库架构
       abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
     }
-    multiDexEnabled true//支持分包
+    multiDexEnabled true //支持分包
   }
   buildTypes {
     release {
@@ -49,90 +49,116 @@ android {
   lintOptions {
     abortOnError false
   }
+  //  tasks.withType(JavaCompile) {
+  //    //指定编译JDK版本
+  //    sourceCompatibility = JavaVersion.VERSION_1_8
+  //    targetCompatibility = JavaVersion.VERSION_1_8
+  //  }
+  //
+  //  compileOptions {
+  //    sourceCompatibility JavaVersion.VERSION_1_8
+  //    targetCompatibility JavaVersion.VERSION_1_8
+  //  }
   dexOptions {
     javaMaxHeapSize "2g"
   }
 }
-
+ext {
+  dagger2Version = '2.0.2'
+  leakcanaryVersion = '1.3'
+  blockcanaryVersion = '1.0.0'
+  metricsVersion = '0.4'
+}
 dependencies {
-  compile fileTree(include: ['*.jar'], dir: 'libs')
-  compile 'com.android.support:design:24.0.0'
-  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-    exclude group: 'com.android.support', module: 'support-annotations'
-  })
-  compile 'com.android.support:appcompat-v7:24.2.1'
+  //  compile fileTree(include: ['*.jar'], dir: 'libs')
+  compile "com.android.support:appcompat-v7:${rootProject.ext.supportVersion}"
+  compile "com.android.support:support-v13:${rootProject.ext.supportVersion}"
+  compile "com.android.support:support-v4:${rootProject.ext.supportVersion}"
+  compile "com.android.support:support-annotations:${rootProject.ext.supportVersion}"
+  compile "com.android.support:recyclerview-v7:${rootProject.ext.supportVersion}"
+  compile "com.android.support:cardview-v7:${rootProject.ext.supportVersion}"
+  //色彩
+  compile "com.android.support:palette-v7:${rootProject.ext.supportVersion}"
+  compile "com.android.support:design:${rootProject.ext.supportVersion}"
   testCompile 'junit:junit:4.12'
   compile files('libs/android-async-http-1.4.9.jar')
-  compile 'cz.msebera.android:httpclient:4.3.6'
-  compile 'com.google.code.gson:gson:2.3'
-  compile 'com.orhanobut:logger:1.11'
   // compile files('libs/okhttputils-2_6_2.jar')
-
   // compile files('libs/okio-1.9.0.jar')
-
   // compile files('libs/okhttp-3.4.1.jar')
-  compile 'com.zhy:okhttputils:2.6.2'
-  compile 'com.squareup.okhttp3:okhttp:3.6.0'
   compile('io.socket:socket.io-client:0.8.3') {
-    // excluding org.json which is provided by Android
     exclude group: 'org.json', module: 'json'
   }
   compile('com.github.afollestad.material-dialogs:core:0.8.5.4@aar') {
     transitive = true
   }
-  //  compile 'com.jakewharton:butterknife:8.5.1'
-
-  //  annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-  compile 'com.jakewharton:butterknife:7.0.1'
-  //底部弹出对话框
-  compile 'com.github.zzz40500:AndroidSweetSheet:1.1.0'
+  //Android流布局,可拖拽button
+  // compile 'com.zhy:flowlayout-lib:1.0.3'
   compile files('libs/commons-lang3-3.3.2.jar')
   compile files('libs/commons-codec-1.9.jar')
+  compile files('libs/BaiduLBS_Android.jar')
+  compile files('libs/commonlib.jar')
+  compile files('libs/boc_hce_service-v1.5.11+.jar')
+  compile files('libs/libammsdk.jar')
+  //dagger2
+  //  compile "com.google.dagger:dagger:${dagger2Version}"
+  //  apt "com.google.dagger:dagger-compiler:${dagger2Version}"
+  //mvp
+  // compile 'com.github.limedroid:XDroidMvp:v1.5.0'
+  compile files('libs/BaiduLBS_Android.jar')
+
+  compile 'com.nineoldandroids:library:2.4.0'
+  compile 'cz.msebera.android:httpclient:4.3.6'
+  compile 'com.google.code.gson:gson:2.3'
+  compile 'com.orhanobut:logger:1.11'
+  compile 'com.zhy:okhttputils:2.6.2'
+  compile 'com.squareup.okhttp3:okhttp:3.6.0'
+  compile 'com.jakewharton:butterknife:7.0.1'
+  compile 'com.github.zzz40500:AndroidSweetSheet:1.1.0'
+  //底部弹出对话框
   compile 'com.roughike:bottom-bar:1.3.1'
   compile 'com.google.zxing:core:3.2.1'
   compile 'cn.bingoogolapple:bga-qrcodecore:1.1.7@aar'
   compile 'cn.bingoogolapple:bga-zxing:1.1.7@aar'
   //欢迎界面动画
   compile 'com.redbooth:WelcomeCoordinator:1.0.1'
-  compile 'com.android.support:support-v4:25.1.1'
-  //  compile 'com.android.support:recyclerview-v7:25.1.1'
-
   //动态权限
   compile 'pub.devrel:easypermissions:0.1.7'
+  //多图片选择器
   compile 'cn.bingoogolapple:bga-photopicker:1.2.3@aar'
   compile 'cn.bingoogolapple:bga-adapter:1.1.8@aar'
-  //glide
   compile 'com.github.bumptech.glide:glide:3.7.0'
-  compile files('libs/BaiduLBS_Android.jar')
+  //数据库查看
   compile 'com.facebook.stetho:stetho:1.1.0'
-  // compile 'com.zhy:flowlayout-lib:1.0.3'
+  //Material Design 风格的搜索效果
   compile 'com.miguelcatalan:materialsearchview:1.4.0'
-  compile 'com.android.support:cardview-v7:23.3.0'
+  //.列表头生成带文本或者字母的图片开源库
   compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+  //rx2
+//  compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+//  compile 'io.reactivex.rxjava2:rxjava:2.0.9'
+  //rx
   compile 'io.reactivex:rxjava:1.2.2'
   compile 'io.reactivex:rxandroid:1.2.1'
+  //日期
   // compile 'org.threeten:threetenbp:1.3.3'
   compile 'com.jakewharton.threetenabp:threetenabp:1.0.5'
   //按拼音排序
   compile 'com.belerweb:pinyin4j:2.5.0'
+  //json解析封装
   compile 'com.alibaba:fastjson:1.2.28'
-  compile files('libs/commonlib.jar')
-  compile files('libs/boc_hce_service-v1.5.11+.jar')
-  compile files('libs/libammsdk.jar')
-  //炫酷viewpager
+  //炫酷viewpager,支持水平和垂直滑动的 ViewPager,并且带有动效,无限滚动的ViewPager卡片效果
   compile 'com.github.devlight:infinitecycleviewpager:1.0.2'
-  //波纹效果
+  //兼容了 4.0 版本的点击按钮扩散动画效果
   compile 'com.github.Yellow5A5:ActSwitchAnimTool:1.0.1'
-  //炫酷tableLayout
+  //炫酷TabLayout
   compile 'eu.long1:spacetablayout:1.0.4'
-  //各个方向对话框
+  //各个方向对话框,支持不同的弹出模式
   compile 'com.orhanobut:dialogplus:1.11@aar'
-  //花式rcl
+  //花式rcl,Android 复杂的多类型列表视图新写法
   compile 'me.drakeet.multitype:multitype:2.4.0'
   //item滑动消失,长按拖动
   compile 'com.github.CodeFalling:RecyclerViewSwipeDismiss:v1.1.3'
-  //mvp
+  //为"单 Activity ＋ 多 Fragment 的架构","多模块 Activity + 多 Fragment 的架构"而生，帮你简化使用过程，
+  compile 'me.yokeyword:fragmentation:0.7.9'
 
-  // compile 'com.github.limedroid:XDroidMvp:v1.5.0'
-  compile files('libs/BaiduLBS_Android.jar')
 }
