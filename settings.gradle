@@ -1,1 +1,2 @@
-include ':app', ':dao1', ':daoexample'
+include ':app', ':dao1', ':daoexample', ':view', ':PhotoViewLibrary', ':pullToRefreshLibrary',
+    ':PhotoViewLibrar', ':ImageLoaderLibrary', ':gp'

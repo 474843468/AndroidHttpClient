@@ -8,9 +8,15 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ImageLoaderLibrary" />
+            <option value="$PROJECT_DIR$/PhotoViewLibrar" />
+            <option value="$PROJECT_DIR$/PhotoViewLibrary" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/dao1" />
             <option value="$PROJECT_DIR$/daoexample" />
+            <option value="$PROJECT_DIR$/gp" />
+            <option value="$PROJECT_DIR$/pullToRefreshLibrary" />
+            <option value="$PROJECT_DIR$/view" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

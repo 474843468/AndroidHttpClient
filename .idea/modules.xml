@@ -3,9 +3,15 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidHttpClient.iml" filepath="$PROJECT_DIR$/AndroidHttpClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ImageLoaderLibrary/ImageLoaderLibrary.iml" filepath="$PROJECT_DIR$/ImageLoaderLibrary/ImageLoaderLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PhotoViewLibrar/PhotoViewLibrar.iml" filepath="$PROJECT_DIR$/PhotoViewLibrar/PhotoViewLibrar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PhotoViewLibrary/PhotoViewLibrary.iml" filepath="$PROJECT_DIR$/PhotoViewLibrary/PhotoViewLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/dao1/dao1.iml" filepath="$PROJECT_DIR$/dao1/dao1.iml" />
       <module fileurl="file://$PROJECT_DIR$/daoexample/daoexample.iml" filepath="$PROJECT_DIR$/daoexample/daoexample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gp/gp.iml" filepath="$PROJECT_DIR$/gp/gp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pullToRefreshLibrary/pullToRefreshLibrary.iml" filepath="$PROJECT_DIR$/pullToRefreshLibrary/pullToRefreshLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view/view.iml" filepath="$PROJECT_DIR$/view/view.iml" />
     </modules>
   </component>
 </project>
