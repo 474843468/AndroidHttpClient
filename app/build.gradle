@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'org.greenrobot.greendao' // apply plugin
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
   buildToolsVersion rootProject.ext.buildToolsVersion
@@ -68,8 +68,10 @@ ext {
   leakcanaryVersion = '1.3'
   blockcanaryVersion = '1.0.0'
   metricsVersion = '0.4'
+  retrofit2Version='2.0.0'
 }
 dependencies {
+
   //  compile fileTree(include: ['*.jar'], dir: 'libs')
   compile "com.android.support:appcompat-v7:${rootProject.ext.supportVersion}"
   compile "com.android.support:support-v13:${rootProject.ext.supportVersion}"
@@ -134,8 +136,8 @@ dependencies {
   //.列表头生成带文本或者字母的图片开源库
   compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
   //rx2
-//  compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-//  compile 'io.reactivex.rxjava2:rxjava:2.0.9'
+  //  compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+  //  compile 'io.reactivex.rxjava2:rxjava:2.0.9'
   //rx
   compile 'io.reactivex:rxjava:1.2.2'
   compile 'io.reactivex:rxandroid:1.2.1'
@@ -160,5 +162,12 @@ dependencies {
   compile 'com.github.CodeFalling:RecyclerViewSwipeDismiss:v1.1.3'
   //为"单 Activity ＋ 多 Fragment 的架构","多模块 Activity + 多 Fragment 的架构"而生，帮你简化使用过程，
   compile 'me.yokeyword:fragmentation:0.7.9'
-
+  //看数据库
+  compile 'com.facebook.stetho:stetho:1.5.0'
+  //greenDao
+  compile 'org.greenrobot:greendao:3.2.2' // add library
+  //retrofit2
+  compile "com.squareup.retrofit2:retrofit:${retrofit2Version}"
+  compile "com.squareup.retrofit2:converter-gson:${retrofit2Version}"
+  compile "com.squareup.retrofit2:adapter-rxjava:${retrofit2Version}"
 }

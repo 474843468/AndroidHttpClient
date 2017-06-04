@@ -1,7 +1,6 @@
 package com.psi.androidhttpclient.client.network;
 
 import com.google.gson.TypeAdapter;
-import java.io.IOException;
 import okhttp3.RequestBody;
 
 /**
@@ -19,7 +18,7 @@ public class GsonRequestConverter<D> implements Converter<D, RequestBody> {
         String json = null;
         try {
             json = adapter.toJson(data);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return RequestBody.create(ContentType.JSON, json);

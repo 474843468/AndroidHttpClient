@@ -8,8 +8,7 @@ import android.support.v7.app.AppCompatDelegate;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
-import com.orhanobut.logger.Logger;
-import com.psi.androidhttpclient.utils.AppUtils;
+import com.facebook.stetho.Stetho;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -42,6 +41,16 @@ public class App extends Application {
         instance = this;
         //初始化屏幕宽高
       getScreenSize();
+      initStetho();
+      //
+      //// do this once, for example in your Application class
+      //helper = new DaoMaster.DevOpenHelper(this, "notes-db", null);
+      //db = helper.getWritableDatabase();
+      //daoMaster = new DaoMaster(db);
+      //daoSession = daoMaster.newSession();
+      //// do this in your activities/fragments to get hold of a DAO
+      //noteDao = daoSession.getNoteDao();
+      // do this once, for example in your Application class
 
         ////初始化数据库
         //Realm.init(getApplicationContext());
@@ -49,7 +58,12 @@ public class App extends Application {
         ////在子线程中完成其他初始化
         //InitializeService.start(this);
     }
-
+  /**
+   * Stetho
+   */
+  private void initStetho() {
+    Stetho.initializeWithDefaults(this);
+  }
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         MultiDex.install(this);

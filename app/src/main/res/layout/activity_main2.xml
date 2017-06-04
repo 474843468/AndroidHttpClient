@@ -122,7 +122,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="activity15"
-        android:text="activity15" />
+        android:text="activity15" /><Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="activity16"
+        android:text="activity16" /><Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="activity17"
+        android:text="activity17" />
 
   </LinearLayout>
 </ScrollView>

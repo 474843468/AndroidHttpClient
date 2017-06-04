@@ -148,7 +148,7 @@ public class TableLabelView extends FrameLayout {
 	}
 
 	/**
-	 * 设置当亲选中标签
+	 * 设置当前选中标签
 	 * 
 	 * @param curSelectedIndex
 	 */

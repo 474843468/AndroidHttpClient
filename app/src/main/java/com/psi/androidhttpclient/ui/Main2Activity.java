@@ -148,6 +148,10 @@ public class Main2Activity extends BaseToolbarActivity1 {
     Intent intent = new Intent(Main2Activity.this, Main14Activity.class);
     startActivity(intent);
   }
+  public void activity15(View v) {
+    Intent intent = new Intent(Main2Activity.this, Main15Activity.class);
+    startActivity(intent);
+  }
 
   private void socketio(String c, String s1, String s) {
 

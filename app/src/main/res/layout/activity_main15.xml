@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+  <com.psi.androidhttpclient.widget.ObjectAnimator.OnDragButton
+      android:id="@+id/tv_drag"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:title="奶妈的" >
+  </com.psi.androidhttpclient.widget.ObjectAnimator.OnDragButton>
+
+  <ImageView
+      android:id="@+id/iv_image"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:src="@drawable/ic_action_action_search" />
+
+  <ImageView
+      android:id="@+id/iv_image1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ic_action_action_search" />
+
+  <ImageView
+      android:id="@+id/iv_image2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:src="@drawable/ic_action_action_search" />
+
+  <ImageView
+      android:id="@+id/iv_image3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ic_action_action_search" />
+
+  <ImageView
+      android:id="@+id/iv_image4"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ic_action_action_search" />
+
+  <ImageView
+      android:id="@+id/iv_image5"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ic_action_action_search" />
+
+  <ImageView
+      android:id="@+id/iv_image6"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ic_action_action_search" />
+
+</RelativeLayout>

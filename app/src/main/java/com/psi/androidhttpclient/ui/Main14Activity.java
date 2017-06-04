@@ -3,6 +3,7 @@ package com.psi.androidhttpclient.ui;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -33,7 +34,8 @@ import com.psi.androidhttpclient.utils.AppUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main14Activity extends AppCompatActivity {
+public class Main14Activity extends AppCompatActivity implements
+    RxFragment.OnFragmentInteractionListener {
 
   /**
    * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -44,7 +46,7 @@ public class Main14Activity extends AppCompatActivity {
    * {@link android.support.v4.app.FragmentStatePagerAdapter}.
    */
   private SectionsPagerAdapter mSectionsPagerAdapter;
-  List<PlaceholderFragment> fragments = new ArrayList<>();
+  List<Fragment> fragments = new ArrayList<>();
   /**
    * The {@link ViewPager} that will host the section contents.
    */
@@ -67,22 +69,40 @@ public class Main14Activity extends AppCompatActivity {
     setSupportActionBar(toolbar);
     // Create the adapter that will return a fragment for each of the three
     // primary sections of the activity.
+    PlaceholderFragment f0 = PlaceholderFragment.newInstance(1);
     PlaceholderFragment f1 = PlaceholderFragment.newInstance(1);
-    PlaceholderFragment f2 = PlaceholderFragment.newInstance(2);
+    RxFragment f2 = RxFragment.newInstance("1");
+    RxFragment f3 = RxFragment.newInstance("2");
+    fragments.add(f0);
     fragments.add(f1);
     fragments.add(f2);
+    fragments.add(f3);
     mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(),fragments);
 
     // Set up the ViewPager with the sections adapter.
     mViewPager = (ViewPager) findViewById(R.id.container);
     mViewPager.setAdapter(mSectionsPagerAdapter);
     int shortNum=2;
-    int longNum=3;
-    mTabLayout.addTab(mTabLayout.newTab().setText(String.format("短评论(%d)",shortNum)));
-    mTabLayout.addTab(mTabLayout.newTab().setText(String.format("长评论(%d)",longNum)));
+    int longNum=5;
+    List<String> s=new ArrayList<>();
+    for (int i=0;i<9;i++){
+      s.add("tab("+i+")");
+    }
+    for (int i=0;i<9;i++){
+      TabLayout.Tab tabi = mTabLayout.newTab().setText(s.get(i));
+      mTabLayout.addTab(tabi);
+      mTabLayout.getTabAt(0).setText(s.get(i));
+    }
+    //TabLayout.Tab tab0 = mTabLayout.newTab().setText(String.format("短评论(%d)", shortNum));
+    //mTabLayout.addTab(tab0);
+    //mTabLayout.addTab(mTabLayout.newTab().setText(String.format("长评论(%d)",longNum)));
+    //mTabLayout.addTab(mTabLayout.newTab().setText(String.format("RXJAVA(%d)",longNum)));
+    //mTabLayout.addTab(mTabLayout.newTab().setText(String.format("RXJAVA1(%d)",shortNum)));
     mTabLayout.setupWithViewPager(mViewPager);
-    mTabLayout.getTabAt(0).setText(String.format("短评论(%d)",shortNum));
-    mTabLayout.getTabAt(1).setText(String.format("长评论(%d)",longNum));
+    //mTabLayout.getTabAt(0).setText(String.format("短评论(%d)",shortNum));
+    //mTabLayout.getTabAt(1).setText(String.format("长评论(%d)",longNum));
+    //mTabLayout.getTabAt(2).setText(String.format("RXJAVA(%d)",shortNum));
+    //mTabLayout.getTabAt(3).setText(String.format("RXJAVA1(%d)",shortNum));
     //TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
     //tabLayout.setupWithViewPager(mViewPager);
 
@@ -95,6 +115,43 @@ public class Main14Activity extends AppCompatActivity {
       }
     });
     loadApps();
+
+    // TODO 初始化下拉刷新控件的相关设置
+    //1. 设置刷新模式
+ /*   ptrListView.setMode(TabLayout.Mode.BOTH);
+
+    //2. 设置下拉或上拉事件监听
+    ptrListView.setOnRefreshListener(new OnRefreshListener2<ListView>() {
+
+      @Override
+      public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
+        // TODO 下拉刷新数据
+        refreshData(false);
+      }
+
+      @Override
+      public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
+        // TODO 上拉加载下页数据
+        loadData(true);
+      }
+    });
+
+    //3. 定制下拉或上拉布局中相应的提示信息与加载图标
+    //获取下拉布局的代理对象
+    ILoadingLayout proxyPullDown =
+        ptrListView.getLoadingLayoutProxy(true,false);
+    proxyPullDown.setPullLabel("下拉刷新");
+    proxyPullDown.setReleaseLabel("放开以刷新");
+    proxyPullDown.setRefreshingLabel("正在玩命地加载....");
+    proxyPullDown.setLoadingDrawable(getResources().getDrawable(R.drawable.ic_launcher));
+
+
+    ILoadingLayout proxyPullUp =
+        ptrListView.getLoadingLayoutProxy(false,true);
+    proxyPullUp.setPullLabel("上拉加载更多");
+    proxyPullUp.setReleaseLabel("放开以加载");
+    proxyPullUp.setRefreshingLabel("正在玩命地加载....");
+    proxyPullUp.setLoadingDrawable(getResources().getDrawable(android.R.drawable.ic_menu_camera));*/
   }
 
   @Override public boolean onCreateOptionsMenu(Menu menu) {
@@ -115,6 +172,10 @@ public class Main14Activity extends AppCompatActivity {
     }
 
     return super.onOptionsItemSelected(item);
+  }
+
+  @Override public void onFragmentInteraction(Uri uri) {
+    Logger.e(uri+"---uri");
   }
 
   /**
@@ -229,15 +290,16 @@ public class Main14Activity extends AppCompatActivity {
     }
     return myInfos;
   }
-  public class SectionsPagerAdapter extends FragmentPagerAdapter {
-    private List<PlaceholderFragment> fragments;
+  public class SectionsPagerAdapter<T extends Fragment> extends FragmentPagerAdapter {
+    private List<T> fragments;
     public SectionsPagerAdapter(FragmentManager fm) {
       super(fm);
     }
-    public SectionsPagerAdapter(FragmentManager fm,List<PlaceholderFragment> fragments) {
+    public SectionsPagerAdapter(FragmentManager fm,List<T> fragments) {
       super(fm);
       this.fragments = fragments;
     }
+
 
     @Override public Fragment getItem(int position) {
       // getItem is called to instantiate the fragment for the given page.
